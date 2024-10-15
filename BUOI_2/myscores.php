@@ -47,14 +47,14 @@
         button {
             padding: 7px;
         }
-      
 
         .text {
             margin-left: 80px;
         }
 
-        .text .display {
-            font-size: 40px;
+        .text #display {
+            font-size: 25px;
+            color: red;
         }
     </style>
 </head>
@@ -125,6 +125,7 @@
             </div>
             <div class="btn">
                 <button type="submit" name="ok" id="ok" value="OK">Submit</button>
+                <button type="reset" name ="reset" onclick="window.location.href='http://localhost:8080/chang_php/BUOI_2/myscores.php'" >Reset</button>
         </form>
 
     </div>
