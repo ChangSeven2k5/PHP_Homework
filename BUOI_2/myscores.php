@@ -49,13 +49,11 @@
         }
 
         .text {
+            font-size: 25px;
+
             margin-left: 80px;
         }
 
-        .text #display {
-            font-size: 25px;
-            color: red;
-        }
     </style>
 </head>
 <body>
@@ -83,15 +81,15 @@
         $result = diemTrungBinh($se1, $se2, $year);
         $check = "";
         if ($result >= 9){
-            $check = "HOC SINH GIOI";
+            $check = "<p style='color: red'>Học sinh giỏi</p>";
         } elseif ($result >= 7 && $result < 9) {
-            $check = "HOC SINH KHA";
+            $check = "<p style='color: blue'>Học sinh khá</p>";
 
         } elseif ($result >= 5 && $result < 7){
-            $check = "HOC SINH TRUNG BINH";
+            $check = "<p style='color: yellow'>Học sinh trung bình</p>";
 
         } else {
-            $check = "HOC SINH YEU";    
+            $check = "<p style='color: pink'>Học sinh yếu</p>";    
         }
     
     ?>
@@ -121,7 +119,8 @@
                 <input type="text" name="result" disabled="true" value ="<?php echo $result?>">
             </div>
             <div class="text">
-                <p id="display"><?php echo $check?></p>
+                <?php echo $check?>
+                
             </div>
             <div class="btn">
                 <button type="submit" name="ok" id="ok" value="OK">Submit</button>
